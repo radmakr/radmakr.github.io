@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thomas Rademaker</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+   
+  </style>
 </head>
 <body>
   <div id="container">
@@ -14,10 +18,13 @@
       <a href="https://www.linkedin.com/in/thomas-rademaker/" target="_blank">Linkedin</a>
       <a href="mailto:thomas@radmakr.com">Email</a>
       <a href="https://x.com/radmakr" target="_blank">X (Twitter)</a>
-      <a href="https://bsky.app/profile/radmakr.com" target="_blank">Bluesky</a>
     </div>
     
+
+    <!-- Bluesky Widget -->
+    <bsky-widget data-handle="radmakr.com"></bsky-widget>
   </div>
-  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/bsky-widget@~0.0/dist/index.js" type="module"></script>
 </body>
 </html>
