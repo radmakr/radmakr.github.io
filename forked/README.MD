@@ -4,25 +4,25 @@
 ### Summary: Include screen shots or a video of your app highlighting its features
 
 I have a splash screen that stays up for 2 seconds to simulate some startup logic.. just for fun.  
-![Splash screen](/screenshots/splash.jpeg)  
+![Splash screen](screenshots/splash.jpeg)  
 
 A list of the recipes when the good endpoint is hit. This is actually displaying the contents of SwiftData.  
-![Recipe List](/screenshots/list.jpeg)   
+![Recipe List](screenshots/list.jpeg)   
 
 A menu with the ability to sort by name or cuisine.  
-![Sort Menu](/screenshots/sortBy.jpeg)  
+![Sort Menu](screenshots/sortBy.jpeg)  
 
 The list when sorted by cuisine. Notice it is now in named sections.
-![Sorted by Cuisine List](/screenshots/cuisine.jpeg)  
+![Sorted by Cuisine List](screenshots/cuisine.jpeg)  
 
 An alert before deleting the list.  
-![Delete alert](/screenshots/alert.jpeg)  
+![Delete alert](screenshots/alert.jpeg)  
 
 The view when empty.  
-![Empty list](/screenshots/noRecipes.jpeg)  
+![Empty list](screenshots/noRecipes.jpeg)  
 
 Finally, sort by which endpoint.  
-![Endpoint Menu](/screenshots/sortByEndpoint.jpeg)  
+![Endpoint Menu](screenshots/sortByEndpoint.jpeg)  
 
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
