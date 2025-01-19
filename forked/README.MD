@@ -36,6 +36,7 @@ It’s hard to know exactly, if you see the times on the git commits you’ll se
 Best guess, about 3 hours. Not including the 11 years I spent perfecting my craft :-)
 
 ### Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
+There are a few // TODO: comments where I would idealy like to handle errors better.  
 Typically this enum in the networking package would be internal and the title property would not exist,
 
 ```swift
