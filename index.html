@@ -5,27 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thomas Rademaker</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-   
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="container">
-    <span id="resizable-text">Thomas Rademaker</span>
+  <div class="container">
+    <header class="header">
+      <div class="name-section">
+        <h1 class="name">Thomas Rademaker</h1>
+        <p class="tagline">Building elegant solutions</p>
+      </div>
+    </header>
 
-    <div id="link-container">
-      <a href="https://github.com/radmakr" target="_blank">Github</a>
-      <a href="https://www.linkedin.com/in/thomas-rademaker/" target="_blank">Linkedin</a>
-      <a href="mailto:thomas@radmakr.com">Email</a>
-      <a href="https://x.com/radmakr" target="_blank">X (Twitter)</a>
-      <a href="https://sparrowtek.com" target="_blank">SparrowTek</a>
-    </div>
-    
+    <main class="main-content">
+      <section class="links-section">
+        <div class="links-grid">
+          <a href="https://github.com/radmakr" target="_blank" class="link-card">
+            <div class="link-icon">📱</div>
+            <span class="link-text">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/thomas-rademaker/" target="_blank" class="link-card">
+            <div class="link-icon">💼</div>
+            <span class="link-text">LinkedIn</span>
+          </a>
+          <a href="mailto:thomas@radmakr.com" class="link-card">
+            <div class="link-icon">✉️</div>
+            <span class="link-text">Email</span>
+          </a>
+          <a href="https://x.com/radmakr" target="_blank" class="link-card">
+            <div class="link-icon">🐦</div>
+            <span class="link-text">X (Twitter)</span>
+          </a>
+          <a href="https://sparrowtek.com" target="_blank" class="link-card">
+            <div class="link-icon">🚀</div>
+            <span class="link-text">SparrowTek</span>
+          </a>
+        </div>
+      </section>
 
-    <!-- Bluesky Widget -->
-    <bsky-widget data-handle="radmakr.com"></bsky-widget>
+      <section class="social-section">
+        <h2 class="section-title">Latest Updates</h2>
+        <div class="bluesky-container">
+          <bsky-widget data-handle="radmakr.com"></bsky-widget>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Thomas Rademaker</p>
+    </footer>
   </div>
 
   <script src="https://unpkg.com/bsky-widget@~0.0/dist/index.js" type="module"></script>
+  <script src="script.js"></script>
 </body>
 </html>
