@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedText = document.querySelector('.typed-text');
     const cursor = document.querySelector('.cursor');
     if (typedText && cursor) {
-        const texts = ['Swift Developer', 'iOS Engineer', 'Code Craftsman', 'App Architect'];
+        const texts = ['Swift Developer', 'iOS Engineer', 'Bitcoiner', 'App Architect'];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
