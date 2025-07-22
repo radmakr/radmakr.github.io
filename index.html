@@ -1,59 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thomas Rademaker</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Rademaker - Swift Developer</title>
+    <meta name="description" content="Thomas Rademaker - Swift Developer specializing in modern app development">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="name-section">
-        <h1 class="name">Thomas Rademaker</h1>
-        <p class="tagline">Swift dev  👨‍💻</p>
-      </div>
-    </header>
+    <div class="grid-bg"></div>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <h1 class="glitch" data-text="Thomas Rademaker">Thomas Rademaker</h1>
+                <div class="typewriter">
+                    <span class="prompt">$</span>
+                    <span class="typed-text">Swift Developer</span>
+                    <span class="cursor">_</span>
+                </div>
+                <p class="bio">Building elegant solutions with clean code</p>
+            </div>
+        </header>
 
-    <main class="main-content">
-      <section class="links-section">
-        <div class="links-grid">
-          <a href="https://github.com/radmakr" target="_blank" class="link-card">
-            <div class="link-icon">📱</div>
-            <span class="link-text">GitHub</span>
-          </a>
-          <a href="https://bsky.app/profile/radmakr.com" target="_blank" class="link-card">
-            <div class="link-icon">🦋</div>
-            <span class="link-text">Bluesky</span>
-          </a>
-          <a href="mailto:thomas@radmakr.com" class="link-card">
-            <div class="link-icon">✉️</div>
-            <span class="link-text">Email</span>
-          </a>
-          <a href="https://x.com/radmakr" target="_blank" class="link-card">
-            <div class="link-icon">🐦</div>
-            <span class="link-text">X (Twitter)</span>
-          </a>
-          <a href="https://sparrowtek.com" target="_blank" class="link-card">
-            <div class="link-icon">🚀</div>
-            <span class="link-text">SparrowTek</span>
-          </a>
-          <a href="https://www.linkedin.com/in/thomas-rademaker/" target="_blank" class="link-card">
-            <div class="link-icon">💼</div>
-            <span class="link-text">LinkedIn</span>
-          </a>
+        <main>
+            <nav class="links-grid" aria-label="Social and professional links">
+                <a href="https://github.com/radmakr" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="GitHub">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">GitHub</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="https://bsky.app/profile/radmakr.com" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="Bluesky">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5.5 8.5c0 1.5-1.5 3-3.5 4.5-2-1.5-3.5-3-3.5-4.5 0-2 1.567-3.5 3.5-3.5S17.5 8.5 17.5 10.5zm-11 0c0 1.5 1.5 3 3.5 4.5 2-1.5 3.5-3 3.5-4.5 0-2-1.567-3.5-3.5-3.5S6.5 8.5 6.5 10.5z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">Bluesky</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="mailto:thomas@radmakr.com" class="link-card" data-hover="Email">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">Email</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="https://x.com/radmakr" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="X">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">X</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="https://sparrowtek.com" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="SparrowTek">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">SparrowTek</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/thomas-rademaker/" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="LinkedIn">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">LinkedIn</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+
+                <a href="https://njump.me/npub1cj90x4rdphxzctp0gd52w28pqc709rf7jhhs0e7tf2766s50na4s56d7my" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="Nostr">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <span class="link-text">Nostr</span>
+                        <div class="link-arrow">→</div>
+                    </div>
+                </a>
+            </nav>
+        </main>
+
+        <footer>
+            <p class="copyright">© <span id="year"></span> Thomas Rademaker</p>
+        </footer>
+    </div>
+
+    <div class="floating-elements">
+        <div class="code-block">
+            <pre><code><span class="keyword">struct</span> <span class="type">Developer</span> {
+    <span class="keyword">let</span> name = <span class="string">"Thomas"</span>
+    <span class="keyword">let</span> language = <span class="string">"Swift"</span>
+    <span class="keyword">let</span> passion = <span class="string">"∞"</span>
+}</code></pre>
         </div>
-      </section>
-    </main>
+    </div>
 
-    <footer class="footer">
-      <p> &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Thomas Rademaker</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
