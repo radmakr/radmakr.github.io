@@ -183,4 +183,26 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('%cWelcome to my site! 🚀', 'color: #007AFF; font-size: 20px; font-weight: bold;');
     console.log('%cBuilt with love and clean code', 'color: #34C759; font-size: 14px;');
     console.log('%cCheck out the source on GitHub!', 'color: #8E8E93; font-size: 12px;');
+
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        let currentTheme = localStorage.getItem('theme');
+        if (!currentTheme) {
+            currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        const updateIcons = () => {
+            themeToggle.querySelector('.sun').style.display = currentTheme === 'dark' ? 'block' : 'none';
+            themeToggle.querySelector('.moon').style.display = currentTheme === 'light' ? 'block' : 'none';
+        };
+        updateIcons();
+
+        themeToggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            updateIcons();
+        });
+    }
 });
