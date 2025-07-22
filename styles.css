@@ -27,32 +27,6 @@ html[data-theme="light"] {
     --grid-line: rgba(0,0,0,0.03);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #000000;
-        --bg-secondary: #1C1C1E;
-        --text: #FFFFFF;
-        --text-muted: #8E8E93;
-        --border-color: #3A3A3C;
-        --card: rgba(28, 28, 30, 0.6);
-        --hover: rgba(255, 255, 255, 0.1);
-        --grid-line: rgba(255,255,255,0.03);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --bg: #FFFFFF;
-        --bg-secondary: #F2F2F7;
-        --text: #000000;
-        --text-muted: #3A3A3C;
-        --border-color: #E5E5EA;
-        --card: rgba(255, 255, 255, 0.8);
-        --hover: rgba(0, 0, 0, 0.05);
-        --grid-line: rgba(0,0,0,0.03);
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
