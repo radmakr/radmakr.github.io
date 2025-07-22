@@ -14,6 +14,7 @@
     --card: rgba(28, 28, 30, 0.6);
     --hover: rgba(255, 255, 255, 0.1);
     --grid-line: rgba(255,255,255,0.03);
+    --toggle-icon: #fff;
 }
 
 html[data-theme="light"] {
@@ -25,6 +26,7 @@ html[data-theme="light"] {
     --card: rgba(255, 255, 255, 0.8);
     --hover: rgba(0, 0, 0, 0.05);
     --grid-line: rgba(0,0,0,0.03);
+    --toggle-icon: #000;
 }
 
 * {
@@ -529,4 +531,16 @@ footer {
     width: 24px;
     height: 24px;
     display: none;
+    stroke: var(--toggle-icon) !important;
+    fill: var(--toggle-icon) !important;
+}
+
+#theme-toggle .sun {
+    stroke: var(--toggle-icon) !important;
+    fill: none !important;
+}
+
+#theme-toggle .moon {
+    fill: var(--toggle-icon) !important;
+    stroke: none !important;
 }
