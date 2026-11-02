@@ -1,146 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>radmakr.com</title>
-    <meta name="description" content="Thomas Rademaker - Swift Developer specializing in modern app development">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thomas Rademaker · Swift developer</title>
+  <meta name="description" content="Thomas Rademaker is a Swift developer in Jersey City, NJ, building native iPhone apps on open protocols at his studio, SparrowTek.">
+  <meta name="author" content="Thomas Rademaker">
+  <link rel="canonical" href="https://radmakr.com/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0e" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    try {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <script type="module" src="assets/js/site.js"></script>
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="radmakr.com">
+  <meta property="og:url" content="https://radmakr.com/">
+  <meta property="og:title" content="Thomas Rademaker">
+  <meta property="og:description" content="Swift developer in Jersey City, NJ. Native iPhone apps on open protocols, from my studio SparrowTek.">
+  <meta property="og:image" content="https://radmakr.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Thomas Rademaker, Swift developer in Jersey City, NJ, beside an orange six-spoke wheel, with the handle @radmakr.com.">
+  <meta property="profile:first_name" content="Thomas">
+  <meta property="profile:last_name" content="Rademaker">
+  <meta property="profile:username" content="radmakr.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Rademaker",
+    "url": "https://radmakr.com/",
+    "email": "mailto:thomas@radmakr.com",
+    "jobTitle": "Swift developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jersey City",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "affiliation": {
+      "@type": "Organization",
+      "name": "SparrowTek",
+      "url": "https://sparrowtek.com/"
+    },
+    "knowsAbout": ["Swift", "SwiftUI", "iOS", "AT Protocol", "Nostr", "Bitcoin", "Lightning Network"],
+    "sameAs": [
+      "https://bsky.app/profile/radmakr.com",
+      "https://tangled.org/@radmakr.com",
+      "https://github.com/radmakr",
+      "https://www.linkedin.com/in/thomas-rademaker/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="grid-bg"></div>
-    <div class="container">
-        <header class="hero">
-            <div class="hero-content">
-                <div class="terminal-header">
-                    <span class="terminal-dot red"></span>
-                    <span class="terminal-dot yellow"></span>
-                    <span class="terminal-dot green"></span>
-                </div>
-                <h1 class="glitch" data-text="Thomas Rademaker">Thomas Rademaker</h1>
-                <div class="typewriter">
-                    <span class="prompt">$</span>
-                    <span class="typed-text">Swift Developer</span>
-                    <span class="cursor">_</span>
-                </div>
-                <p class="bio">Building elegant solutions with clean code</p>
-                <div class="theme-toggle">
-                    <button id="theme-toggle" aria-label="Toggle color mode">
-                        <svg class="icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5" />
-                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                        </svg>
-                        <svg class="icon moon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-wheel" viewBox="0 0 32 32"><g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="12.75" stroke-width="2.5"/><path stroke-width="2" stroke-linecap="round" d="M16 4.5v23M6.04 10.25l19.92 11.5M6.04 21.75l19.92-11.5"/></g><circle cx="16" cy="16" r="3.75" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4.75 11.25 11.25 4.75M6 4.75h5.25V10"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3.5 6.25h17v11.5h-17zM3.75 6.75 12 13l8.25-6.25"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="5.25" y="5.25" width="8.5" height="8.5" rx="2"/><path d="M10.75 5.25V4.25a2 2 0 0 0-2-2h-4.5a2 2 0 0 0-2 2v4.5a2 2 0 0 0 2 2h1"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m3.5 8.5 3 3 6-7"/></symbol>
+    <symbol id="i-system" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="currentColor" d="M8 2.25a5.75 5.75 0 0 1 0 11.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.75v1.5M8 12.75v1.5M1.75 8h1.5M12.75 8h1.5M3.58 3.58l1.06 1.06M11.36 11.36l1.06 1.06M3.58 12.42l1.06-1.06M11.36 4.64l1.06-1.06"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M13.25 9.9A5.5 5.5 0 1 1 6.1 2.75a4.5 4.5 0 0 0 7.15 7.15Z"/></symbol>
+    <symbol id="i-bluesky" viewBox="0 0 600 530"><path fill="currentColor" d="M135.72 44.03C202.216 93.951 273.74 195.17 300 249.49C326.26 195.17 397.784 93.951 464.28 44.03C512.694 7.98 589.996 -22.37 589.996 76.07C589.996 95.69 578.9 247.16 572.16 268.28C549.56 339.67 476.36 359.18 410.56 347.52C523.36 367.56 555.56 432.52 487.16 497.52C356.74 621.56 310.76 448.99 301.7 417.28C300.58 413.4 300.06 411.62 300 413.38C299.94 411.62 299.42 413.4 298.3 417.28C289.24 448.99 243.26 621.56 112.84 497.52C44.44 432.52 76.64 367.56 189.44 347.52C123.64 359.18 50.44 339.67 27.84 268.28C21.1 247.16 10 95.69 10 76.07C10 -22.37 87.306 7.98 135.72 44.03Z"/></symbol>
+    <symbol id="i-tangled" viewBox="0 0 32 32"><path fill="currentColor" d="M21.0971 30.866C20.0566 30.8575 19.2628 30.5542 18.4016 30.0269C17.1668 29.3753 16.2237 28.2808 15.5497 27.0739C14.4789 28.4065 13.0476 29.215 11.4453 29.6718C10.763 29.8705 9.56809 30.0721 7.58737 29.3523C4.73277 28.3905 2.65342 25.4114 2.88973 22.3758C2.8465 21.1175 3.30392 19.8825 3.95228 18.8208C2.22264 17.8897 0.81225 16.3266 0.272148 14.4098C-0.0560731 13.3604 -0.042271 12.2299 0.0787626 11.1512C0.512215 8.60429 2.41697 6.38956 4.86912 5.59294C5.8479 3.35574 7.98378 1.68743 10.4037 1.34778C12.0104 1.12338 13.6735 1.46075 15.0792 2.27979C17.1272 0.00158595 20.6952 -0.671697 23.4195 0.727793C25.4978 1.72322 26.9839 3.80003 27.3447 6.06471C29.3222 6.85928 30.9877 8.47971 31.6413 10.5368C32.0784 11.8104 32.0928 13.2132 31.8098 14.5209C31.3041 16.5615 29.8679 18.2987 28.009 19.2482C28.0135 19.6113 29.2037 22.2296 29.0047 24.2056C28.9612 26.676 27.399 29.0172 25.2325 30.1544C23.9683 30.8945 22.4702 30.8805 21.0971 30.866ZM15.1733 23.755C16.9256 23.5593 18.0743 22.0269 18.9665 20.6469C19.3883 20.0182 19.7105 19.3146 20.0306 18.6454C20.4458 19.0271 20.7975 19.7461 21.4541 19.9173C22.1457 20.1333 22.9566 19.9579 23.38 19.3277C24.1902 17.8118 23.7908 15.9827 23.319 14.4119C23.0284 13.5097 22.6472 12.5841 21.9218 11.9446C22.0765 10.85 21.4299 9.73834 20.5106 9.16542C19.7272 9.79198 18.5352 9.78821 17.7794 9.11795C16.3309 10.5997 15.0034 10.5505 13.7212 9.37618C13.4331 9.11226 12.8832 10.9871 10.9535 9.92506C9.84488 10.8567 8.98526 11.753 8.22356 13.0435C7.48342 14.4347 6.70829 15.6703 6.64151 17.1811C6.6094 18.0641 7.29731 18.9892 8.22942 18.9174C9.16105 19.0009 9.7952 18.0813 10.5006 17.6993C10.6058 18.9316 10.7243 20.2556 11.1395 21.4587C11.6161 23.0155 13.2947 24.005 14.8835 23.7784C14.9959 23.7696 15.1733 23.7549 15.1733 23.755ZM16.0828 19.1062C15.2306 18.5823 15.6407 17.4452 15.6066 16.6193C15.6914 15.6227 15.7594 14.575 16.2061 13.667C16.6788 13.0197 17.8318 13.2694 17.8827 14.0999C17.8488 14.9353 17.4664 15.767 17.5121 16.633C17.4129 17.3561 17.5839 18.1684 17.265 18.8293C17.0033 19.195 16.4703 19.3013 16.0828 19.1062ZM12.3606 18.6302C11.5578 18.1933 11.8129 17.0941 11.687 16.3298C11.7914 15.445 11.7045 14.3226 12.4431 13.7021C13.1653 13.1969 14.1485 14.0621 13.8069 14.8564C13.4426 15.8602 13.6814 16.957 13.6891 17.9748C13.5512 18.5752 12.911 18.894 12.3606 18.6302Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 25 24"><path fill="currentColor" fill-rule="evenodd" d="M12.5103 0C5.59245 0 0 5.49998 0 12.3042C0 17.7432 3.58327 22.3472 8.55422 23.9767C9.17572 24.0992 9.40337 23.7119 9.40337 23.3862C9.40337 23.1009 9.38289 22.1232 9.38289 21.1044C5.90281 21.8379 5.17812 19.6377 5.17812 19.6377C4.61885 18.2117 3.79018 17.8452 3.79018 17.8452C2.65116 17.0914 3.87315 17.0914 3.87315 17.0914C5.13663 17.1729 5.79961 18.3544 5.79961 18.3544C6.9179 20.2284 8.7199 19.6989 9.44486 19.3729C9.54831 18.5784 9.87993 18.0284 10.232 17.7229C7.45642 17.4377 4.53613 16.3784 4.53613 11.6522C4.53613 10.3077 5.03292 9.20771 5.8201 8.35222C5.6959 8.04672 5.26083 6.78347 5.94455 5.09273C5.94455 5.09273 7.00087 4.76673 9.38263 6.35572C10.4023 6.08639 11.454 5.94938 12.5103 5.94823C13.5667 5.94823 14.6435 6.09098 15.6378 6.35572C18.0198 4.76673 19.0761 5.09273 19.0761 5.09273C19.7599 6.78347 19.3245 8.04672 19.2003 8.35222C20.0083 9.20771 20.4846 10.3077 20.4846 11.6522C20.4846 16.3784 17.5643 17.4172 14.7679 17.7229C15.2237 18.1099 15.6171 18.8432 15.6171 20.0044C15.6171 21.6544 15.5966 22.9787 15.5966 23.3859C15.5966 23.7119 15.8245 24.0992 16.4457 23.9769C21.4167 22.3469 24.9999 17.7432 24.9999 12.3042C25.0204 5.49998 19.4075 0 12.5103 0Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- MARK: - Header -->
+  <header class="site-header" data-header>
+    <div class="wrap nav">
+      <a class="brand" href="./" aria-label="radmakr.com, home">
+        <svg class="brand-mark" width="26" height="26" aria-hidden="true"><use href="#i-wheel"/></svg>
+        <span class="brand-name" aria-hidden="true">radmakr</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav-links" role="list">
+          <li><a href="#work">Work</a></li>
+          <li class="nav-extra"><a href="#opinions">Opinions</a></li>
+          <li class="nav-extra"><a href="#handle">Handle</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle hidden>
+        <svg class="i" width="16" height="16" data-icon="system" aria-hidden="true"><use href="#i-system"/></svg>
+        <svg class="i" width="16" height="16" data-icon="light" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="i" width="16" height="16" data-icon="dark" aria-hidden="true"><use href="#i-moon"/></svg>
+        <span class="visually-hidden" data-theme-label>Theme: system (switches to light)</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- MARK: - Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="hero-wheel" viewBox="0 0 200 200" width="240" height="240" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+        <circle cx="100" cy="100" r="96"/>
+        <circle cx="100" cy="100" r="86"/>
+        <circle cx="100" cy="100" r="16"/>
+        <circle cx="100" cy="100" r="7"/>
+        <path d="M116 100H186M113.856 108 174.478 143M108 113.856 143 174.478M100 116V186M92 113.856 57 174.478M86.144 108 25.522 143M84 100H14M86.144 92 25.522 57M92 86.144 57 25.522M100 84V14M108 86.144 143 25.522M113.856 92 174.478 57"/>
+      </svg>
+      <div class="wrap hero-grid">
+        <div class="hero-intro">
+          <p class="eyebrow">Swift developer · Jersey City, NJ</p>
+          <h1 id="hero-title"><span>Thomas</span> <span>Rademaker</span></h1>
+          <p class="lede">I write Swift and build native apps for iPhone, mostly on open protocols like the AT&nbsp;Protocol, Nostr and Lightning. My studio, <a href="https://sparrowtek.com">SparrowTek</a>, has been shipping them to the App&nbsp;Store since 2016.</p>
+          <ul class="links" role="list" aria-label="Find me">
+            <li><a class="link-primary" href="mailto:thomas@radmakr.com"><svg class="i" width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg>Email</a></li>
+            <li><a href="https://bsky.app/profile/radmakr.com" rel="me"><svg class="i" width="16" height="16" aria-hidden="true"><use href="#i-bluesky"/></svg>Bluesky</a></li>
+            <li><a href="https://tangled.org/@radmakr.com" rel="me"><svg class="i" width="16" height="16" aria-hidden="true"><use href="#i-tangled"/></svg>Tangled</a></li>
+            <li><a href="https://github.com/radmakr" rel="me"><svg class="i" width="16" height="16" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-rademaker/" rel="me"><svg class="i" width="16" height="16" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+          </ul>
+          <p class="definition"><dfn>ra·de·ma·ker</dfn> <span class="definition-pos">Dutch, noun.</span> A wheelwright. I make apps instead, and I try not to reinvent the wheel. <span class="definition-note">radmakr is the same word, minus two e’s.</span></p>
+        </div>
+
+        <aside class="now" aria-labelledby="now-title">
+          <header class="now-head">
+            <h2 id="now-title">Now</h2>
+            <p><time datetime="2026-11">November 2026</time></p>
+          </header>
+          <ul role="list">
+            <li>Teaching <a href="https://avocadough.xyz/developers">Avocadough</a> to pay any AT&nbsp;Protocol handle over Lightning.</li>
+            <li>Getting <a href="https://effem.xyz">Effem</a>, a podcast player built on the AT&nbsp;Protocol, ready for the App&nbsp;Store.</li>
+            <li>Shipped <a href="https://perchbtc.com">Perch</a> in September. First commit to the App&nbsp;Store in under seven weeks.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MARK: - Work -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap section-grid">
+        <header class="section-head">
+          <p class="kicker"><b>01</b> Work</p>
+          <h2 id="work-title">Shipped</h2>
+          <p>Six apps on the App&nbsp;Store, one on the web and one on the way. Each one does a single job, and does it well.</p>
         </header>
 
-        <main>
-            <nav class="links-grid" aria-label="Social and professional links">
-                <a href="https://github.com/radmakr" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="GitHub">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">GitHub</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
+        <div class="section-body">
+          <ol class="log" role="list">
+            <li><a class="log-link" href="https://effem.xyz">
+              <span class="log-meta"><span class="log-date log-date--soon">Soon</span><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/effem.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Effem</span><span class="log-desc">Social podcasting on the AT&nbsp;Protocol and the Podcast Index.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://boostz.xyz">
+              <span class="log-meta"><span class="log-date">Live</span><span class="log-platform">Web</span></span>
+              <img class="app-icon" src="assets/img/apps/boostz.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Boostz</span><span class="log-desc">Every boost a podcast host gets, in one inbox to read on air.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://perchbtc.com">
+              <span class="log-meta"><time class="log-date" datetime="2026-09-18">Sep 2026</time><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/perch.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Perch</span><span class="log-desc">Watch the Bitcoin your STX earns from Stacking land on your Lock&nbsp;Screen.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://avocadoge.com">
+              <span class="log-meta"><time class="log-date" datetime="2026-03-30">Mar 2026</time><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/avocadoge.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Avocadoge</span><span class="log-desc">A self-custody Dogecoin wallet. Your keys never leave your iPhone.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://anchorsobriety.com">
+              <span class="log-meta"><time class="log-date" datetime="2026-03-07">Mar 2026</time><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/anchor.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Anchor</span><span class="log-desc">A private, offline-first companion for anyone choosing sobriety.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://reattune.xyz">
+              <span class="log-meta"><time class="log-date" datetime="2026-02-15">Feb 2026</time><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/reattune.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">ReAttune</span><span class="log-desc">Sound sessions generated live on your iPhone, with a gentle breath pacer.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://avocadough.xyz">
+              <span class="log-meta"><time class="log-date" datetime="2025-06-09">Jun 2025</time><span class="log-platform">iPhone</span></span>
+              <img class="app-icon" src="assets/img/apps/avocadough.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Avocadough</span><span class="log-desc">Send and receive sats from the Lightning wallet you already use.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a class="log-link" href="https://apps.apple.com/us/app/little-man-computer/id1174092777">
+              <span class="log-meta"><time class="log-date" datetime="2016-11-09">Nov 2016</time><span class="log-platform">iPhone &amp; iPad</span></span>
+              <img class="app-icon" src="assets/img/apps/lmc.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span class="log-main"><span class="log-name">Little Man Computer</span><span class="log-desc">Learn how a computer thinks by programming a model of one from 1965.</span></span>
+              <svg class="i log-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+          </ol>
 
-                <a href="https://tangled.org/@radmakr.com" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="Tangled">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="6" cy="6" r="2"/>
-                                <circle cx="18" cy="6" r="2"/>
-                                <circle cx="12" cy="12" r="2"/>
-                                <circle cx="6" cy="18" r="2"/>
-                                <circle cx="18" cy="18" r="2"/>
-                                <path d="M6 8v8M18 8v8M8 6h8M8 18h8M7.5 7.5l9 9M16.5 7.5l-9 9M12 10v4" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">Tangled</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
-
-                <a href="mailto:thomas@radmakr.com" class="link-card" data-hover="Email">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">Email</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
-
-
-                <a href="https://bsky.app/profile/radmakr.com" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="Bluesky">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">Bluesky</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
-
-
-                <a href="https://sparrowtek.com" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="SparrowTek">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">SparrowTek</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/thomas-rademaker/" class="link-card" target="_blank" rel="noopener noreferrer" data-hover="LinkedIn">
-                    <div class="card-content">
-                        <div class="icon-wrapper">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                            </svg>
-                        </div>
-                        <span class="link-text">LinkedIn</span>
-                        <div class="link-arrow">→</div>
-                    </div>
-                </a>
-
-                
-            </nav>
-        </main>
-
-        <footer>
-            <p class="copyright">© <span id="year"></span> Thomas Rademaker</p>
-        </footer>
-    </div>
-
-    <div class="floating-elements">
-        <div class="code-block">
-            <pre><code><span class="keyword">struct</span> <span class="type">Developer</span> {
-    <span class="keyword">let</span> name = <span class="string">"Thomas"</span>
-    <span class="keyword">let</span> language = <span class="string">"Swift"</span>
-    <span class="keyword">let</span> passion = <span class="string">"∞"</span>
-}</code></pre>
+          <dl class="stats">
+            <div><dt>Founded SparrowTek</dt><dd>2013</dd></div>
+            <div><dt>Apps on the App Store</dt><dd>6</dd></div>
+            <div><dt>Open-source Swift projects</dt><dd>30+</dd></div>
+            <div class="stats-zero"><dt>Force unwraps allowed</dt><dd>0</dd></div>
+          </dl>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- MARK: - Open source -->
+    <section class="section" id="open-source" aria-labelledby="open-source-title">
+      <div class="wrap section-grid">
+        <header class="section-head">
+          <p class="kicker"><b>02</b> Open source</p>
+          <h2 id="open-source-title">Swift for open protocols</h2>
+          <p>The packages under my apps are open source. When a protocol I want to use doesn’t have a good Swift library, I write one.</p>
+        </header>
+
+        <div class="section-body">
+          <ul class="protocols" role="list">
+            <li>
+              <div><h3>AT Protocol</h3><p>OAuth, identity resolution and repo records. The plumbing under Effem and Avocadough.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://tangled.org/sparrowtek.com/CoreATProtocol">CoreATProtocol</a></li>
+                <li><a href="https://tangled.org/sparrowtek.com/EffemKit">EffemKit</a></li>
+                <li><a href="https://tangled.org/sparrowtek.com/AvocadoughKit">AvocadoughKit</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Nostr</h3><p>Keys, events and relays, plus Nostr Wallet Connect for paying over Lightning.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/NostrKit">NostrKit</a></li>
+                <li><a href="https://github.com/SparrowTek/CoreNostr">CoreNostr</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Cashu</h3><p>Ecash for Apple platforms. Currently in beta.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/CashuKit">CashuKit</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Stacks</h3><p>A native Swift take on the Stacks.js core: keys, transactions, Clarity values and stacking.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/StacksKit">StacksKit</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Dogecoin</h3><p>SPV wallets in pure Swift, from HD keys to peer-to-peer sync.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/DogecoinKit">DogecoinKit</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Podcasting 2.0</h3><p>The Podcast Index API, value-for-value included.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/PodcastIndexKit">PodcastIndexKit</a></li>
+              </ul>
+            </li>
+            <li>
+              <div><h3>Plumbing</h3><p>Typed endpoints on URLSession and Swift concurrency, and the keychain without the ceremony.</p></div>
+              <ul class="packages" role="list">
+                <li><a href="https://github.com/SparrowTek/NetworkingKit">NetworkingKit</a></li>
+                <li><a href="https://github.com/SparrowTek/Vault">Vault</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="more">Everything else is on <a href="https://github.com/SparrowTek">GitHub</a> and <a href="https://tangled.org/sparrowtek.com">Tangled</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: - Opinions -->
+    <section class="section" id="opinions" aria-labelledby="opinions-title">
+      <div class="wrap section-grid">
+        <header class="section-head">
+          <p class="kicker"><b>03</b> Opinions</p>
+          <h2 id="opinions-title">Opinions, strongly held</h2>
+          <p>Mostly about Swift. All of them negotiable, except number two.</p>
+        </header>
+
+        <div class="section-body">
+          <ol class="opinions" role="list">
+            <li>
+              <h3>SwiftUI is the architecture.</h3>
+              <p>Views draw the screen. Presenters own navigation, sheets and alerts. State lives in observable objects in the environment. There are no view models.</p>
+            </li>
+            <li>
+              <h3>Never force-unwrap an optional.</h3>
+              <p>Ever. If a value can be nil, the code should say what happens when it is.</p>
+            </li>
+            <li>
+              <h3>Write the prototype like it’s shipping.</h3>
+              <p>Because it will. Nearly every prototype I’ve been asked to build ended up in production.</p>
+            </li>
+            <li>
+              <h3>Previews are part of the product.</h3>
+              <p>Every SwiftUI preview should build and show real data. If you’re going to use the new tools, use them properly.</p>
+            </li>
+            <li>
+              <h3>Own your handle.</h3>
+              <p>Build on protocols no single company controls, and make your identity a domain you own. Mine is <a href="#handle">this one</a>.</p>
+            </li>
+          </ol>
+          <p class="signoff">The long version is my <a href="https://github.com/radmakr/skills">skills repo</a>, the Swift conventions I give coding agents so their code reads like mine.</p>
+          <p class="signoff signoff--comment">// I will not be taking questions at this time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: - Handle -->
+    <section class="section" id="handle" aria-labelledby="handle-title">
+      <div class="wrap section-grid">
+        <header class="section-head">
+          <p class="kicker"><b>04</b> Handle</p>
+          <h2 id="handle-title">This domain is my handle</h2>
+          <p>On Bluesky and Tangled I’m <b>@radmakr.com</b>. A DNS record ties the domain to a decentralized identifier, and the identifier points to the server that holds my data. Every app I sign in to writes to the same repo, and I can take it with me.</p>
+        </header>
+
+        <div class="section-body">
+          <div class="resolver" data-resolver data-handle="radmakr.com">
+            <div class="resolver-bar">
+              <p class="resolver-command"><span aria-hidden="true">$ </span>resolve <b>radmakr.com</b></p>
+              <button class="button" type="button" data-resolve hidden>Resolve live</button>
+            </div>
+            <ol class="steps" role="list">
+              <li class="step" data-step="dns">
+                <span class="step-no" aria-hidden="true">1</span>
+                <p class="step-title">DNS</p>
+                <p class="step-detail">TXT _atproto.radmakr.com</p>
+                <span class="step-time" data-time></span>
+                <div class="step-value" data-value><p><code>did=did:plc:aq5iwu4gjdcg2hq53llism3x</code></p></div>
+              </li>
+              <li class="step" data-step="did">
+                <span class="step-no" aria-hidden="true">2</span>
+                <p class="step-title">DID document</p>
+                <p class="step-detail">plc.directory</p>
+                <span class="step-time" data-time></span>
+                <div class="step-value" data-value><p>alsoKnownAs <code>at://radmakr.com</code> <span class="ok">✓</span></p><p>PDS <code>inkcap.us-east.host.bsky.network</code></p></div>
+              </li>
+              <li class="step" data-step="repo">
+                <span class="step-no" aria-hidden="true">3</span>
+                <p class="step-title">Repo</p>
+                <p class="step-detail">com.atproto.repo.describeRepo</p>
+                <span class="step-time" data-time></span>
+                <div class="step-value" data-value>
+                  <p>handle verified <span class="ok">✓</span> · 22 collections from 4 apps</p>
+                  <ul class="chips" role="list">
+                    <li><a class="chip" href="https://tangled.org">Tangled <span class="chip-count">10</span></a></li>
+                    <li><a class="chip" href="https://bsky.app">Bluesky <span class="chip-count">7</span></a></li>
+                    <li><a class="chip chip--mine" href="https://effem.xyz">Effem <span class="chip-count">4</span><span class="visually-hidden"> (one of my apps)</span></a></li>
+                    <li><a class="chip" href="https://www.germnetwork.com">Germ <span class="chip-count">1</span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+            <p class="resolver-status" role="status" data-status>Last checked November 1, 2026.</p>
+          </div>
+          <p class="fineprint">Resolving sends three requests from your browser: Cloudflare’s DNS, plc.directory and my PDS. Nothing else on this page talks to another server. Effem, highlighted above, is one of my apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: - Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap section-grid">
+        <header class="section-head">
+          <p class="kicker"><b>05</b> Contact</p>
+          <h2 id="contact-title">Okay, I’ll take questions.</h2>
+          <p>Email is the surest way to reach me. I’m also on Bluesky, mostly posting about Swift, open protocols and NJ&nbsp;Transit.</p>
+        </header>
+
+        <div class="section-body">
+          <div class="mail-row">
+            <a class="mail" href="mailto:thomas@radmakr.com">thomas@radmakr.com</a>
+            <button class="copy" type="button" data-copy="thomas@radmakr.com" hidden>
+              <svg class="i" width="16" height="16" data-icon="copy" aria-hidden="true"><use href="#i-copy"/></svg>
+              <svg class="i" width="16" height="16" data-icon="done" aria-hidden="true"><use href="#i-check"/></svg>
+              <span data-copy-label>Copy</span>
+            </button>
+          </div>
+
+          <ul class="elsewhere" role="list">
+            <li><a href="https://bsky.app/profile/radmakr.com" rel="me">
+              <svg class="i elsewhere-icon" width="20" height="20" aria-hidden="true"><use href="#i-bluesky"/></svg>
+              <span class="elsewhere-name">Bluesky</span><span class="elsewhere-handle">@radmakr.com</span>
+              <svg class="i elsewhere-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a href="https://tangled.org/@radmakr.com" rel="me">
+              <svg class="i elsewhere-icon" width="20" height="20" aria-hidden="true"><use href="#i-tangled"/></svg>
+              <span class="elsewhere-name">Tangled</span><span class="elsewhere-handle">@radmakr.com</span>
+              <svg class="i elsewhere-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a href="https://github.com/radmakr" rel="me">
+              <svg class="i elsewhere-icon" width="20" height="20" aria-hidden="true"><use href="#i-github"/></svg>
+              <span class="elsewhere-name">GitHub</span><span class="elsewhere-handle">radmakr</span>
+              <svg class="i elsewhere-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-rademaker/" rel="me">
+              <svg class="i elsewhere-icon" width="20" height="20" aria-hidden="true"><use href="#i-linkedin"/></svg>
+              <span class="elsewhere-name">LinkedIn</span><span class="elsewhere-handle">thomas-rademaker</span>
+              <svg class="i elsewhere-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+            <li><a href="https://sparrowtek.com">
+              <img class="elsewhere-icon" src="assets/img/sparrowtek.svg" alt="" width="20" height="20" loading="lazy" decoding="async">
+              <span class="elsewhere-name">SparrowTek</span><span class="elsewhere-handle">sparrowtek.com</span>
+              <svg class="i elsewhere-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MARK: - Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer">
+      <p>© <span data-year>2026</span> Thomas Rademaker · Jersey City, NJ</p>
+      <p>No cookies, no analytics, no trackers. Plain HTML and CSS on GitHub Pages. <a href="https://github.com/radmakr/radmakr.github.io">View source</a></p>
+    </div>
+  </footer>
 </body>
 </html>

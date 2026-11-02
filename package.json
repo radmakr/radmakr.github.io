@@ -1,0 +1,12 @@
+{
+  "name": "radmakr.com",
+  "private": true,
+  "description": "Thomas Rademaker's personal site. Static HTML, CSS and a little JavaScript, served by GitHub Pages with no build step.",
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/serve.ts",
+    "test": "bun test",
+    "images": "bun tools/images.ts",
+    "links": "bun scripts/check-links.ts"
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Not found · radmakr.com</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0e" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>
+    try {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <script type="module" src="/assets/js/site.js"></script>
+</head>
+<body>
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-wheel" viewBox="0 0 32 32"><g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="12.75" stroke-width="2.5"/><path stroke-width="2" stroke-linecap="round" d="M16 4.5v23M6.04 10.25l19.92 11.5M6.04 21.75l19.92-11.5"/></g><circle cx="16" cy="16" r="3.75" fill="currentColor"/></symbol>
+    <symbol id="i-system" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="currentColor" d="M8 2.25a5.75 5.75 0 0 1 0 11.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.75v1.5M8 12.75v1.5M1.75 8h1.5M12.75 8h1.5M3.58 3.58l1.06 1.06M11.36 11.36l1.06 1.06M3.58 12.42l1.06-1.06M11.36 4.64l1.06-1.06"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M13.25 9.9A5.5 5.5 0 1 1 6.1 2.75a4.5 4.5 0 0 0 7.15 7.15Z"/></symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="radmakr.com, home">
+        <svg class="brand-mark" width="26" height="26" aria-hidden="true"><use href="#i-wheel"/></svg>
+        <span class="brand-name" aria-hidden="true">radmakr</span>
+      </a>
+      <button class="theme-toggle" type="button" data-theme-toggle hidden>
+        <svg class="i" width="16" height="16" data-icon="system" aria-hidden="true"><use href="#i-system"/></svg>
+        <svg class="i" width="16" height="16" data-icon="light" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="i" width="16" height="16" data-icon="dark" aria-hidden="true"><use href="#i-moon"/></svg>
+        <span class="visually-hidden" data-theme-label>Theme: system (switches to light)</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap oops">
+    <p class="eyebrow">404 · Not found</p>
+    <h1>Fatal error: Unexpectedly found nil while unwrapping an Optional value</h1>
+    <p class="lede">There’s nothing at <code data-path>this address</code>. Somebody force-unwrapped it, and I have opinions about that.</p>
+    <p><a class="oops-code" href="/"><span class="kw">guard let</span> page <span class="kw">else</span> { <span class="kw">return</span> <span class="fn">home</span> }</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer">
+      <p>© <span data-year>2026</span> Thomas Rademaker · Jersey City, NJ</p>
+      <p><a href="/">Back to radmakr.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>

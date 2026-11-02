@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>radmakr.com social card</title>
+  <!-- Rendered to /og.png at 1200×630 by `bun run images`. -->
+  <style>
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      background: #0d0d0e;
+      color: #ededea;
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wheel-lines {
+      position: absolute;
+      top: -95px;
+      right: -230px;
+      width: 820px;
+      height: 820px;
+      fill: none;
+      stroke: #2a2a2e;
+      stroke-width: 2;
+    }
+
+    .wheel-lines * {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .mark {
+      position: absolute;
+      top: 225px;
+      right: 92px;
+      width: 180px;
+      height: 180px;
+      color: #ff6a4b;
+    }
+
+    .card {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 76px 80px 70px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #a3a39d;
+      font: 500 26px/1 ui-monospace, "SF Mono", Menlo, monospace;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ff6a4b;
+    }
+
+    h1 {
+      margin: 46px 0 0;
+      font-size: 136px;
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+    }
+
+    h1 span {
+      display: block;
+    }
+
+    .handle {
+      margin-top: auto;
+      color: #ff8166;
+      font: 500 32px/1 ui-monospace, "SF Mono", Menlo, monospace;
+    }
+  </style>
+</head>
+<body>
+  <svg class="wheel-lines" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="96"/>
+    <circle cx="100" cy="100" r="86"/>
+    <circle cx="100" cy="100" r="24"/>
+    <path d="M124 100H186M120.785 112 174.478 143M112 120.785 143 174.478M100 124V186M88 120.785 57 174.478M79.215 112 25.522 143M76 100H14M79.215 88 25.522 57M88 79.215 57 25.522M100 76V14M112 79.215 143 25.522M120.785 88 174.478 57"/>
+  </svg>
+
+  <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+    <g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="12.75" stroke-width="2.5"/><path stroke-width="2" stroke-linecap="round" d="M16 4.5v23M6.04 10.25l19.92 11.5M6.04 21.75l19.92-11.5"/></g>
+    <circle cx="16" cy="16" r="3.75" fill="currentColor"/>
+  </svg>
+
+  <main class="card">
+    <p class="eyebrow">Swift developer · Jersey City, NJ</p>
+    <h1><span>Thomas</span> <span>Rademaker</span></h1>
+    <p class="handle">@radmakr.com</p>
+  </main>
+</body>
+</html>
